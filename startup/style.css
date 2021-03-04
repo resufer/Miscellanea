@@ -1,0 +1,151 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+}
+
+
+header {
+	background: url('img/Header.png') no-repeat 50% 50%;
+	width: 100%;
+	height: 100vh;
+	padding-top: 25px;
+	object-fit: cover;
+}
+
+	.top-header {
+		width: 100%;
+		height: 10vh;
+		margin: 0 auto;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
+
+	.logo {
+		width: 30%;
+		font-weight: 800;
+		font-size: calc(1.25vw + 7.5px);
+		color: aliceblue;
+		transform: translateY(-7px);
+		text-align: center;
+ 	}
+
+	nav {
+		width: 40%;
+	}
+
+		nav a {
+			display: inline-block;
+ 			font-size: calc(0.75vw + 6px);
+			font-family: "Myriad Pro";
+			color: white;
+			text-decoration: none;
+			padding-right: calc(1.5vw + 7.5px);
+			line-height: 1.714;
+		}
+
+
+	.caption {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-between;
+		align-items: center;
+		height: calc(15vh + 5vw);
+		width: 75vw;
+		margin: 0 auto;
+		margin-top: 35vh;
+	}
+
+		.caption-text_1 {
+  			font-size: calc(2.5vw + 10px);
+  			font-family: "Montserrat";
+  			color: white;
+  			text-transform: uppercase;
+  			text-align: center;
+		}
+
+		.caption-text_2 {
+			font-size: calc(1vw + 7.5px);
+			text-align: center;
+  		color: white;
+  		letter-spacing: 1.5px;
+		}
+
+		.getStart-btn {
+  			font-size: calc(0.5vw + 7.5px);
+  			font-family: "Montserrat";
+  			color: white;
+  			text-transform: uppercase;
+  			text-align: center;
+  			height: calc(4vh + 1.5vw);
+  			width: calc(6.5vw + 100px);
+  			background-color: rgba(255, 255, 255, 0);
+  			border: 1.6px solid white;
+  			transition: all 0.2s linear;
+		}
+
+			.getStart-btn:hover {
+				background-color: rgba(255, 255, 255, 1);
+				color: red;
+			}
+
+
+
+
+@media screen and (max-width: 900px) and (min-width: 400px) {
+	.top-header {
+		width: 80%;
+		margin: 0 auto;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
+
+	.logo {
+		width: 5%;
+		font-weight: 800;
+		font-size: calc(1.25vw + 15px);
+		transform: translateY(-7px);
+ 	}
+
+		nav a {
+ 			font-size: calc(0.5vw + 10px);
+			font-weight: 600;
+			color: white;
+			padding-right: calc(1.5vw + 5px);
+			line-height: 1.714;
+		}
+
+
+	.caption {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-between;
+		align-items: center;
+		height: calc(15vh + 10vw);
+		width: 75vw;
+		margin: 0 auto;
+		margin-top: 25vh;
+	}
+
+		.caption-text_1 {
+  			font-size: calc(2vw + 20px);
+		}
+
+		.caption-text_2 {
+			font-size: calc(0.75vw + 12.5px);
+  		letter-spacing: 1.5px;
+		}
+
+		.getStart-btn {
+  			font-size: calc(0.25vw + 12.5px);
+  			height: calc(5vh + 1.25vw);
+  			width: calc(5vw + 125px);
+  			border: 1.6px solid white;
+		}
+}
