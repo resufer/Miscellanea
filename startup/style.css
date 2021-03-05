@@ -236,4 +236,55 @@ header {
   			width: calc(5vw + 125px);
   			border: 1.6px solid white;
 		}
+
+
+
+
+
+	.services-title {
+  	font-size: calc(1.25vw + 12.5px);
+		margin-top: 10vh;
+	}
+
+	.unvisible-text {
+		width: 5vw;
+		margin: 0 auto;
+		font-size: calc(0.75vw + 3px);
+		color: white;
+		text-align: center;
+		border-bottom: 1.5px solid black;
+	}
+
+	.services-subtitle {
+		margin-top: 2.5vh;
+		font-size: calc(1vw + 7.5px);
+  	color: rgb(85, 85, 85);
+		text-align: center;
+	}
+
+
+	.three-single-services {
+		width: 80%;
+		margin: 0 auto;
+		margin-top: 10vh;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+	}
+
+		.first-single-services, .second-single-services, .third-single-services {
+			 width: 100%;
+			 margin-top: 50px;
+		}
+
+	.Single-services-mainTitle1, .Single-services-mainTitle2, .Single-services-mainTitle3 {
+		text-align: center;
+		margin: 15px auto;
+	}
+
+	.Single-services-title1, .Single-services-title2, .Single-services-title3 {
+		text-align: center;
+		width: calc(20vw + 200px);
+		margin: 0 auto;
+	}
 }
