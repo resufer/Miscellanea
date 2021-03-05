@@ -6,6 +6,7 @@
 
 body {
 	width: 100vw;
+	overflow-x: hidden;
 }
 
 
@@ -93,6 +94,93 @@ header {
 				background-color: rgba(255, 255, 255, 1);
 				color: red;
 			}
+
+
+
+
+
+.Services {
+	height: 33vh;
+	background-color: white;
+	width: 100%;
+}
+
+	.services-title {
+		width: 100%;
+  	font-size: calc(1.25vw + 7.5px);
+  	font-family: "Montserrat";
+		color: black;
+  	text-align: center;
+		margin-top: 12.5vh;
+	}
+
+	.unvisible-text {
+		width: 5vw;
+		margin: 0 auto;
+		font-size: calc(0.75vw + 3px);
+		color: white;
+		text-align: center;
+		border-bottom: 1.5px solid black;
+	}
+
+	.services-subtitle {
+		margin-top: 2.5vh;
+		font-size: calc(1vw + 4px);
+  	color: rgb(85, 85, 85);
+		text-align: center;
+	}
+
+
+	.three-single-services {
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 12.5vh;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+	}
+
+		.first-single-services, .second-single-services, .third-single-services {
+			 display: block;	
+			 width: 33.3333333333333333333%;
+		}
+
+			.first-single-img, .second-single-img, .third-single-img {
+				height: 90px;
+				width: 90px;
+				background-color: white;
+				border-radius: 50%;
+				text-align: center;
+				margin: 0 auto;
+				border: 2.5px lightgrey solid;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: center;
+				align-items: center;
+			}
+			.first-single-img {
+				color: red;
+				background-color: white;
+				font-size: 70px;
+				margin: 0 auto;
+				transition: all 0.3s cubic-bezier(.17,.67,.83,.67);
+			}
+				.first-single-img:hover {
+					color: white;
+					background-color: red;
+				}
+
+	.Single-services-mainTitle1, .Single-services-mainTitle2, .Single-services-mainTitle3 {
+		text-align: center;
+		margin: 15px auto;
+	}
+
+	.Single-services-title1, .Single-services-title2, .Single-services-title3 {
+		text-align: center;
+		width: calc(20vw + 100px);
+		margin: 0 auto;
+	}
+
 
 
 
