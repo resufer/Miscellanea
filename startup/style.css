@@ -182,6 +182,36 @@ header {
 	}
 
 
+.About {
+	height: 100vh;
+	background-color: rgb(233, 230, 230);
+	display: block;
+	margin-top: 20vh;
+}
+	.about-title {
+		width: 100%;
+  	font-size: calc(1.25vw + 7.5px);
+  	font-family: "Montserrat";
+		color: black;
+  	text-align: center;
+		padding-top: 10vh;
+	}
+	.unvisible-text-about {
+		width: 5vw;
+		margin: 0 auto;
+		font-size: calc(0.75vw + 3px);
+		color: white;
+		text-align: center;
+		border-bottom: 1.5px solid black;
+	}
+	.about-subtitle {
+		margin-top: 2.5vh;
+		font-size: calc(1vw + 4px);
+  	color: rgb(85, 85, 85);
+		text-align: center;
+	}
+
+
 
 
 
