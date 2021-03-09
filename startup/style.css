@@ -200,7 +200,7 @@ header {
 		width: 5vw;
 		margin: 0 auto;
 		font-size: calc(0.75vw + 3px);
-		color: white;
+		color: rgb(233, 230, 230);
 		text-align: center;
 		border-bottom: 1.5px solid black;
 	}
@@ -211,7 +211,41 @@ header {
 		text-align: center;
 	}
 
-
+	.about-block-title {
+		padding-top: 7.5vh;
+		width: 80%;
+		font-size: calc(1vw + 7.5px);
+		margin: 0 auto;
+	}
+	.first-about-block {
+		width: 90%;
+		margin: 0 auto;
+		padding-top: 5vh;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+		.f-a-img {
+			height: 40vh;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-around;
+		}
+			.f-a-img img {
+				width: calc(10vw + 50px);
+				height: calc(10vw + 50px);
+			}
+			.img-title {
+				width: calc(10vw + 50px);
+				text-align: center;
+				font-size: calc(1vw + 10px);
+			}
+			.img-subtitle {
+				width: calc(10vw + 50px);
+				text-align: center;
+				font-size: calc(0.75vw + 7.5px);
+			}
 
 
 
