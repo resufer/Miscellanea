@@ -100,9 +100,10 @@ header {
 
 
 .Services {
-	height: 33vh;
-	background-color: white;
+	display: block;
 	width: 100%;
+	height: 50vh;
+	background-color: white;
 }
 
 	.services-title {
@@ -182,6 +183,7 @@ header {
 	}
 
 
+
 .About {
 	height: 100vh;
 	background-color: rgb(233, 230, 230);
@@ -249,7 +251,8 @@ header {
 
 
 
-@media screen and (max-width: 900px) and (min-width: 400px) {
+
+@media screen and (max-width: 900px) and (min-width: 300px) {
 	.top-header {
 		width: 80%;
 		margin: 0 auto;
@@ -302,8 +305,12 @@ header {
 		}
 
 
-
-
+	.Services {
+		display: block;
+		width: 100%;
+		height: 110vh;
+		background-color: white;
+	}
 
 	.services-title {
   	font-size: calc(1.25vw + 12.5px);
@@ -330,7 +337,7 @@ header {
 	.three-single-services {
 		width: 80%;
 		margin: 0 auto;
-		margin-top: 10vh;
+		margin-top: 5vh;
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: flex-start;
@@ -351,4 +358,72 @@ header {
 		width: calc(20vw + 200px);
 		margin: 0 auto;
 	}
+
+
+
+	.About {
+		height: 100vh;
+		background-color: rgb(233, 230, 230);
+		display: block;
+		margin-top: 20vh;
+	}
+		.about-title {
+			width: 100%;
+			font-size: calc(1.25vw + 12.5px);
+			font-family: "Montserrat";
+			color: black;
+			text-align: center;
+			padding-top: 10vh;
+		}
+		.unvisible-text-about {
+			width: 5vw;
+			margin: 0 auto;
+			font-size: calc(0.75vw + 3px);
+			color: rgb(233, 230, 230);
+			text-align: center;
+			border-bottom: 1.5px solid black;
+		}
+		.about-subtitle {
+			margin-top: 2vh;
+			font-size: calc(1vw + 7.5px);
+			color: rgb(85, 85, 85);
+			text-align: center;
+		}
+
+		.about-block-title {
+			padding-top: 5vh;
+			width: 80%;
+			font-size: calc(1vw + 7.5px);
+			line-height: 2;
+			margin: 0 auto;
+		}
+		.first-about-block {
+			width: 90%;
+			margin: 0 auto;
+			padding-top: 2.5vh;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			align-items: center;
+		}
+			.f-a-img {
+				height: 27.5vh;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: space-around;
+			}
+				.f-a-img img {
+					width: calc(10vw + 100px);
+					height: calc(10vw + 100px);
+				}
+				.img-title {
+					width: calc(10vw + 100px);
+					text-align: center;
+					font-size: calc(1vw + 15px);
+				}
+				.img-subtitle {
+					width: calc(10vw + 100px);
+					text-align: center;
+					font-size: calc(0.75vw + 7.5px);
+				}
 }
