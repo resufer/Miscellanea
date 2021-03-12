@@ -297,6 +297,49 @@ header {
 		}
 
 
+	.call {
+		margin-top: calc(15vh + 250px);
+		display: block;
+		height: 40vh;
+		width: 100%;
+		background-image: url('img/call/callImg2.png'), url('img/call/callImg.png');
+	}
+
+		.call-title {
+			width: 454px;
+  		height: 70px;
+			margin: 0 auto;
+			padding-top: 100px;
+  		font-size: 30px;
+  		color: white;
+  		text-align: center;
+		}
+
+		.block-btn-call {
+			width: 100vw;
+			padding-top: 100px;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+		}
+
+		.btn-call {
+			height: 47px;
+  		width: 178px;
+			font-size: 16px;
+  		color: rgb(255, 255, 255);
+  		text-align: center;
+  		background-color: rgba(255, 255, 255, 0);
+  		border: 1.6px solid white;
+  		transition: all 0.2s linear;
+		}
+			.btn-call:hover {
+				background-color: rgba(255, 255, 255, 1);
+				color: red;
+			}
+
+
+
 
 
 @media screen and (max-width: 900px) and (min-width: 300px) {
