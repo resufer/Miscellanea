@@ -339,6 +339,34 @@ header {
 			}
 
 
+	.blog {
+		margin-top: 20vh;
+		height: 120vh;
+		width: 100%;
+		background-color: white;
+	}
+
+		.blog-title {
+			width: 100%;
+			font-size: calc(1.25vw + 7.5px);
+			color: black;
+			text-align: center;
+		}
+		.unvisible-text-blog {
+			width: 5vw;
+			margin: 0 auto;
+			color: white;
+			text-align: center;
+			border-bottom: 1.5px solid black;
+		}
+		.blog-subtitle {
+			font-size: 16px;
+			color: black;
+			text-align: center;
+			margin-top: 2.5vh;
+			font-size: calc(1vw + 4px);
+		}
+
 
 
 
