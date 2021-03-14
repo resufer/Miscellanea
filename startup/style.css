@@ -544,4 +544,46 @@ header {
 					text-align: center;
 					font-size: calc(0.75vw + 7.5px);
 				}
+	
+		.Works {
+		height: 40vh;
+		margin-top: 5vh;
+	}
+
+		.works-title {
+			font-size: calc(1.25vw + 12.5px);
+			color: black;
+			text-align: center;
+		}
+		.unvisible-text-works {
+			width: 5vw;
+			margin: 0 auto;
+			color: white;
+			text-align: center;
+			border-bottom: 1.5px solid black;
+		}
+		.works-subtitle {
+			font-size: 16px;
+			color: black;
+			text-align: center;
+			margin-top: 2.5vh;
+			font-size: calc(1vw + 7.5px);
+		}
+
+		.big-block-works {
+			width: 50%;
+			margin: 0 auto;
+			margin-top: 5vh;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+		}
+
+		.Works .block {
+			height: calc(10vw + 50px);
+		}
+			.Works img {
+				height: calc(10vw + 25px);
+				width: calc(10vw + 25px);
+			}
 }
