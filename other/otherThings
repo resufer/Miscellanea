@@ -18,4 +18,19 @@ func()
 print('---------------')
 func = decorator(func)
 func()
+
+##### OR #####
+
+def decorator(func):
+    def wrapper():
+        print('hi')
+        func()
+        print('Bye')
+    return wrapper
+
+@decorator
+def func():
+    print("don't change me")
+
+func()
 #####################################################################################################################################################################
