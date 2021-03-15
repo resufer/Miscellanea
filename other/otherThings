@@ -34,3 +34,26 @@ def func():
 
 func()
 #####################################################################################################################################################################
+
+def decorator1(func):
+    def wrapper(*args):
+        print('Hi! I am wrapper')
+        func(*args)
+    return wrapper
+
+def decorator2(func):
+    def wrapper2(*args):
+        print('wrapper2!')
+        func(*args)
+    return wrapper2
+        
+
+def func(*args):
+    result = 0
+    for i in range(len(args)):
+        result += args[i]
+    print(result)
+
+decorator1(func)(2, 3, 4, 5, 6)
+decorator2(func)(5, 5, 5, 5)
+decorator2(decorator1(func))(5, 5, 5, 5)
