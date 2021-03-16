@@ -18,3 +18,28 @@ x, y = 10, 10
 direct_x, direct_y = 1, 2  
 
 clock = pygame.time.Clock()
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            quit()  
+    clock.tick(60) 
+    screen.fill(BLACK)  
+    screen.blit(text, (x, y))
+
+    if x >= 900 - width or x == 0:
+        direct_x = -direct_x
+        colorCount += 1
+
+    if y >= 700 - height or y == 0:
+        direct_y = -direct_y
+        colorCount += 1
+
+    if colorCount > 2:
+        colorCount = 0
+    text = font.render('DVD', 1, WHITE, colors[colorCount])
+
+    x += direct_x
+    y += direct_y
+
+    pygame.display.update()
