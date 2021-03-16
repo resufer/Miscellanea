@@ -1,0 +1,20 @@
+import pygame
+pygame.init()
+
+screen = pygame.display.set_mode((900, 700))  
+pygame.display.set_caption('')  
+
+font = pygame.font.SysFont('mangal', 44)
+
+BLACK, RED, GREEN, BLUE, WHITE = (0, 0, 0), (255, 0, 0), (0, 255, 0), (
+    0, 0, 255), (255, 255, 255)
+
+colorCount, colors = 0, [RED, GREEN, BLUE]
+
+text = font.render('DVD', 1, WHITE, colors[colorCount])
+width, height = text.get_size() 
+
+x, y = 10, 10 
+direct_x, direct_y = 1, 2  
+
+clock = pygame.time.Clock()
