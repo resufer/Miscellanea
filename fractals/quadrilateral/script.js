@@ -76,3 +76,15 @@ let movePoint = function () {
 drawQuadrilateral()
 initPoint()
 let interval = setInterval(() => movePoint(), time)
+
+window.addEventListener('keypress', (e) => {
+  if (e.key === ' ') {
+    clearInterval(interval)
+    time /= 5
+    interval = setInterval(() => movePoint(), time)
+  } else if (e.key === 'Enter') {
+    clearInterval(interval)
+    time *= 5
+    interval = setInterval(() => movePoint(), time)
+  }
+});
