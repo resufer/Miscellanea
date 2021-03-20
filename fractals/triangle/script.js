@@ -1,7 +1,7 @@
 let canvas = document.getElementById('canvas');
-ctx = canvas.getContext('2d');
-width = document.documentElement.clientWidth;
-height = document.documentElement.clientHeight;
+let ctx = canvas.getContext('2d');
+let width = document.documentElement.clientWidth;
+let height = document.documentElement.clientHeight;
 canvas.width = width;
 canvas.height = height;
 
@@ -11,7 +11,7 @@ let trianglePoints = {
   C: { x: 0.75 * width, y: 0.9 * height }
 }
 
-let pointX, pointY;
+let pointX, pointY, time = 2000;
 
 
 let drawBorder = function () {
@@ -93,5 +93,17 @@ let movePoint = function () {
 drawBorder()
 drawTriangle()
 initPoint()
-setInterval(() => movePoint(), 10)
+let interval = setInterval(() => movePoint(), time)
+
+window.addEventListener('keypress', (e) => {
+  if (e.key === ' ') {
+    clearInterval(interval)
+    time /= 5
+    interval = setInterval(() => movePoint(), time)
+  } else if (e.key === 'Enter') {
+    clearInterval(interval)
+    time *= 5
+    interval = setInterval(() => movePoint(), time)
+  }
+});
 
