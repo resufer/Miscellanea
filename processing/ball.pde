@@ -19,6 +19,16 @@ void draw() {
       randomDirection = 1;
     } else if (key == ' ') {
       randomDirection = 0;
+    } else if (key == '1') {
+      speed = 1;
+    } else if (key == '2') {
+      speed = 5;
+    } else if (key == '3') {
+      speed = 15;
+    } else if (key == '4') {
+      speed = 25;
+    } else if (key == '5') {
+      speed = 100;
     }
   }
   
