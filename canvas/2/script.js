@@ -29,18 +29,23 @@ window.onkeydown = function (event) {
 	if (event.key === 'ArrowDown') {
 		x += 10;
 		y += 10;
-	}
-	if (event.key === 'ArrowUp') {
+	} else if (event.key === 'ArrowUp') {
 		x -= 10;
 		y -= 10;
-	}
-	if (event.key === 'ArrowLeft') {
+	} else if (event.key === 'ArrowLeft') {
 		x -= 10;
 		y += 10;
-	}
-	if (event.key === 'ArrowRight') {
+	} else if (event.key === 'ArrowRight') {
 		x += 10;
 		y -= 10;
+	} else if (event.key === 'w') {
+		y -= 10;
+	} else if (event.key === 'd') {
+		x += 10;
+	} else if (event.key === 's') {
+		y += 10;
+	} else if (event.key === 'a') {
+		x -= 10;
 	}
 
 	ctx1.lineTo(x, y);
