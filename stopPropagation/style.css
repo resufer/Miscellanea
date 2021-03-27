@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.black {
+  width: 35vw;
+  height: 35vw;
+  background-color: rgb(0, 0, 0);
+}
+
+.purple {
+  width: 30vw;
+  height: 30vw;
+  background-color: purple;
+}
+
+.blue {
+  width: 25vw;
+  height: 25vw;
+  background-color: blue;
+}
+
+.green {
+  width: 20vw;
+  height: 20vw;
+  background-color: green;
+}
+
+.yellow {
+  width: 15vw;
+  height: 15vw;
+  background-color: rgb(252, 193, 2);
+}
+
+.red {
+  width: 10vw;
+  height: 10vw;
+  background-color: red;
+}
+
+.main {
+  width: 5vw;
+  height: 5vw;
+  background-color: rgb(255, 255, 255);
+}
+
+.main, .red, .yellow, .green, .blue, .purple, .black {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50% 50%;
+}
