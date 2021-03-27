@@ -39,24 +39,38 @@ ctx4.lineWidth = 5;
 ctx4.stroke();
 
 document.onkeydown = function (event) {
-  if (event.key === 'ArrowDown') {
-    y += 10;
-  }
-  if (event.key === 'ArrowUp') {
-    y -= 10;
-  }
-  if (event.key === 'ArrowLeft') {
-    x -= 10;
-  }
-  if (event.key === 'ArrowRight') {
-    x += 10;
-  }
+	if (event.key === 'ArrowDown') {
+		x += 10;
+		y += 10;
+	} else if (event.key === 'ArrowUp') {
+		x -= 10;
+		y -= 10;
+	} else if (event.key === 'ArrowLeft') {
+		x -= 10;
+		y += 10;
+	} else if (event.key === 'ArrowRight') {
+		x += 10;
+		y -= 10;
+	} else if (event.key.toLowerCase() === 'w') {
+		y -= 10;
+	} else if (event.key.toLowerCase() === 'd') {
+		x += 10;
+	} else if (event.key.toLowerCase() === 's') {
+		y += 10;
+	} else if (event.key.toLowerCase() === 'a') {
+		x -= 10;
+	}
+  
+  
   ctx1.lineTo(x, y);
-  ctx2.lineTo(x, y);
-  ctx3.lineTo(x, y);
-  ctx4.lineTo(x, y);
   ctx1.stroke();
+  
+  ctx2.lineTo(x, y);
   ctx2.stroke();
+  
+  ctx3.lineTo(x, y);
   ctx3.stroke();
+  
+  ctx4.lineTo(x, y);
   ctx4.stroke();
 }
