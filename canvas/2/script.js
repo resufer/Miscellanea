@@ -38,13 +38,13 @@ window.onkeydown = function (event) {
 	} else if (event.key === 'ArrowRight') {
 		x += 10;
 		y -= 10;
-	} else if (event.key === 'w') {
+	} else if (event.key.toLowerCase() === 'w') {
 		y -= 10;
-	} else if (event.key === 'd') {
+	} else if (event.key.toLowerCase() === 'd') {
 		x += 10;
-	} else if (event.key === 's') {
+	} else if (event.key.toLowerCase() === 's') {
 		y += 10;
-	} else if (event.key === 'a') {
+	} else if (event.key.toLowerCase() === 'a') {
 		x -= 10;
 	}
 
