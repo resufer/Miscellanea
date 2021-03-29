@@ -12,8 +12,8 @@ let colors = ['rgb(255, 255, 255)', 'rgb(255, 0, 0)', 'rgb(252, 193, 2)', 'rgb(0
 
 
 main.onclick = (e) => {
-  let currentColor = getComputedStyle(main)['background-color']; debugger;
-  let index = colors.indexOf(currentColor); debugger;
+  let currentColor = getComputedStyle(main)['background-color'];
+  let index = colors.indexOf(currentColor);
   if (index === colors.length - 1) {
     index = -1;
   }
@@ -22,8 +22,8 @@ main.onclick = (e) => {
 
 
 red.onclick = (e) => {
-  let currentColor = getComputedStyle(red)['background-color']; debugger;
-  let index = colors.indexOf(currentColor); debugger;
+  let currentColor = getComputedStyle(red)['background-color'];
+  let index = colors.indexOf(currentColor);
   if (index === colors.length - 1) {
     index = -1;
   }
@@ -32,8 +32,8 @@ red.onclick = (e) => {
 
 
 yellow.onclick = (e) => {
-  let currentColor = getComputedStyle(yellow)['background-color']; debugger;
-  let index = colors.indexOf(currentColor); debugger;
+  let currentColor = getComputedStyle(yellow)['background-color'];
+  let index = colors.indexOf(currentColor);
   if (index === colors.length - 1) {
     index = -1;
   }
@@ -42,8 +42,8 @@ yellow.onclick = (e) => {
 
 
 green.onclick = (e) => {
-  let currentColor = getComputedStyle(green)['background-color']; debugger;
-  let index = colors.indexOf(currentColor); debugger;
+  let currentColor = getComputedStyle(green)['background-color'];
+  let index = colors.indexOf(currentColor);
   if (index === colors.length - 1) {
     index = -1;
   }
@@ -52,8 +52,8 @@ green.onclick = (e) => {
 
 
 blue.onclick = (e) => {
-  let currentColor = getComputedStyle(blue)['background-color']; debugger;
-  let index = colors.indexOf(currentColor); debugger;
+  let currentColor = getComputedStyle(blue)['background-color'];
+  let index = colors.indexOf(currentColor);
   if (index === colors.length - 1) {
     index = -1;
   }
@@ -62,8 +62,8 @@ blue.onclick = (e) => {
 
 
 purple.onclick = (e) => {
-  let currentColor = getComputedStyle(purple)['background-color']; debugger;
-  let index = colors.indexOf(currentColor); debugger;
+  let currentColor = getComputedStyle(purple)['background-color'];
+  let index = colors.indexOf(currentColor);
   if (index === colors.length - 1) {
     index = -1;
   }
@@ -72,8 +72,8 @@ purple.onclick = (e) => {
 
 
 black.onclick = (e) => {
-  let currentColor = getComputedStyle(black)['background-color']; debugger;
-  let index = colors.indexOf(currentColor); debugger;
+  let currentColor = getComputedStyle(black)['background-color'];
+  let index = colors.indexOf(currentColor);
   if (index === colors.length - 1) {
     index = -1;
   }
