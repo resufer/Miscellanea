@@ -6,6 +6,7 @@
 body {
   width: 100vw;
   height: 100vh;
+  background-color: rgb(175, 175, 175);
   overflow: hidden;
   display: flex;
   flex-flow: row nowrap;
@@ -61,4 +62,11 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50% 50%;
+}
+
+
+input[type='range'] {
+  position: absolute;
+  left: 50;
+  bottom: 5%;
 }
