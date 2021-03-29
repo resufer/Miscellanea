@@ -1,14 +1,26 @@
 let main = document.querySelector('.main');
-let red = document.querySelector('.red'); window.red = red
+let red = document.querySelector('.red');
 let yellow = document.querySelector('.yellow');
 let green = document.querySelector('.green');
 let blue = document.querySelector('.blue');
 let purple = document.querySelector('.purple');
 let black = document.querySelector('.black');
 
-
-let colors = ['rgb(255, 255, 255)', 'rgb(255, 0, 0)', 'rgb(252, 193, 2)', 'rgb(0, 128, 0)',
+let allColors = ['rgb(255, 255, 255)', 'rgb(255, 0, 0)', 'rgb(252, 193, 2)', 'rgb(0, 128, 0)',
   'rgb(0, 0, 255)', 'rgb(128, 0, 128)', 'rgb(0, 0, 0)'];
+let colors = allColors;
+
+let inputRange = document.getElementById('range');
+let inputValue;
+
+inputRange.onmousedown = (e) => {
+  inputValue = inputRange.value;
+  inputRange.onmouseup = (e) => {
+    inputValue = inputRange.value;
+    colors = allColors.slice(0, allColors.length + 1 - inputValue)
+  }
+}
+
 
 
 main.onclick = (e) => {
