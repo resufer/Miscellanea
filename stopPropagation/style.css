@@ -70,3 +70,11 @@ input[type='range'] {
   left: 50;
   bottom: 5%;
 }
+
+
+label {
+  position: absolute;
+  left: 50;
+  top: 5%;
+  font-size: 18px;
+}
