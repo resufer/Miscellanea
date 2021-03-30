@@ -6,6 +6,7 @@ let blue = document.querySelector('.blue');
 let purple = document.querySelector('.purple');
 let black = document.querySelector('.black');
 
+
 let allColors = ['rgb(255, 255, 255)', 'rgb(255, 0, 0)', 'rgb(252, 193, 2)', 'rgb(0, 128, 0)',
   'rgb(0, 0, 255)', 'rgb(128, 0, 128)', 'rgb(0, 0, 0)'];
 let colors = allColors;
@@ -22,6 +23,15 @@ inputRange.onmousedown = (e) => {
 }
 
 
+let checkboxState = false;
+let checkbox = document.getElementById('checkbox');
+
+checkbox.onclick = () => {
+  checkboxState = !checkboxState;
+}
+
+
+
 
 main.onclick = (e) => {
   let currentColor = getComputedStyle(main)['background-color'];
@@ -29,7 +39,9 @@ main.onclick = (e) => {
   if (index === colors.length - 1) {
     index = -1;
   }
-  main.style.backgroundColor = colors[index + 1]
+  main.style.backgroundColor = colors[index + 1];
+
+  if (checkboxState) e.stopPropagation();
 }
 
 
@@ -39,7 +51,9 @@ red.onclick = (e) => {
   if (index === colors.length - 1) {
     index = -1;
   }
-  red.style.backgroundColor = colors[index + 1]
+  red.style.backgroundColor = colors[index + 1];
+
+  if (checkboxState) e.stopPropagation();
 }
 
 
@@ -49,7 +63,9 @@ yellow.onclick = (e) => {
   if (index === colors.length - 1) {
     index = -1;
   }
-  yellow.style.backgroundColor = colors[index + 1]
+  yellow.style.backgroundColor = colors[index + 1];
+
+  if (checkboxState) e.stopPropagation();
 }
 
 
@@ -59,7 +75,9 @@ green.onclick = (e) => {
   if (index === colors.length - 1) {
     index = -1;
   }
-  green.style.backgroundColor = colors[index + 1]
+  green.style.backgroundColor = colors[index + 1];
+
+  if (checkboxState) e.stopPropagation();
 }
 
 
@@ -69,7 +87,9 @@ blue.onclick = (e) => {
   if (index === colors.length - 1) {
     index = -1;
   }
-  blue.style.backgroundColor = colors[index + 1]
+  blue.style.backgroundColor = colors[index + 1];
+
+  if (checkboxState) e.stopPropagation();
 }
 
 
@@ -79,7 +99,9 @@ purple.onclick = (e) => {
   if (index === colors.length - 1) {
     index = -1;
   }
-  purple.style.backgroundColor = colors[index + 1]
+  purple.style.backgroundColor = colors[index + 1];
+
+  if (checkboxState) e.stopPropagation();
 }
 
 
@@ -89,5 +111,7 @@ black.onclick = (e) => {
   if (index === colors.length - 1) {
     index = -1;
   }
-  black.style.backgroundColor = colors[index + 1]
+  black.style.backgroundColor = colors[index + 1];
+
+  if (checkboxState) e.stopPropagation();
 }
