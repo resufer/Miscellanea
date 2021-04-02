@@ -24,3 +24,16 @@ canvas.onclick = function (event) {
 	clickY = event.clientY;
 	document.onmousemove = draw;
 }
+
+canvas.ondblclick = function () {
+	ctx.clearRect(0, 0, width, height);
+	clickX = width / 2;
+	clickY = height / 2;
+}
+
+document.onkeydown = function (e) {
+	if (e.keyCode === 68) moveX += 5;
+	if (e.keyCode === 65) moveX -= 5;
+	if (e.keyCode === 83) moveY += 5;
+	if (e.keyCode === 87) moveY -= 5;
+}
