@@ -26,26 +26,11 @@ let drawBorder = function () {
 let drawTriangle = function () {
   ctx.beginPath();
 
-  ctx.font = "30px Courier";
-  ctx.fillStyle = "Green";
-  ctx.textAlign = "left";
-  ctx.textBaseline = "middle";
-  ctx.fillText("A", trianglePoints.A.x - 15, trianglePoints.A.y + 5);
   ctx.moveTo(trianglePoints.A.x, trianglePoints.A.y);
 
-  ctx.font = "30px Courier";
-  ctx.fillStyle = "Green";
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  ctx.fillText("B", trianglePoints.B.x, trianglePoints.B.y - 10);
   ctx.lineTo(trianglePoints.B.x, trianglePoints.B.y);
   ctx.stroke();
 
-  ctx.font = "30px Courier";
-  ctx.fillStyle = "Green";
-  ctx.textAlign = "right";
-  ctx.textBaseline = "bottom";
-  ctx.fillText("C", trianglePoints.C.x + 20, trianglePoints.C.y + 20);
   ctx.lineTo(trianglePoints.C.x, trianglePoints.C.y);
   ctx.stroke();
 
