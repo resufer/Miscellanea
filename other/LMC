@@ -1,4 +1,0 @@
-import speech_recognition as sr
-import time, pyautogui
-microf = sr.Microphone(device_index=1)
-r = sr.Recognizer()
