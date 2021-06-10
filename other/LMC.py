@@ -4,7 +4,36 @@ microf = sr.Microphone(device_index=1)
 r = sr.Recognizer()
 
 
+################################################## <Position Block> ##################################################
+def whatPosition():
+    with microf as source:
+        print('Какая позиция из пяти?')
+        audio = r.listen(source)
+    try:
+        audioPosition = r.recognize_google(audio, language='ru-RU') # число на первый и один
+        moveMouseToPosition(audioPosition)
+    except:
+        print('Что-то пошло не так ' * 5)
+        time.sleep(1.5)
+        main()
 
+
+def moveMouseToPosition(position):
+    if int(position) == 1:
+        pyautogui.moveTo(15, 15)
+    elif int(position) == 2:
+        pyautogui.moveTo(1890, 15)
+    elif int(position) == 3:
+        pyautogui.moveTo(1890, 1063)
+    elif int(position) == 4:
+        pyautogui.moveTo(15, 1063)
+    elif int(position) == 5:
+        pyautogui.moveTo(930, 530)
+    main()
+################################################## </Position Block> ##################################################
+
+
+    
 ################################################## <Main Block> ##################################################
 def main():
     global main
