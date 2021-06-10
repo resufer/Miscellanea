@@ -33,7 +33,33 @@ def moveMouseToPosition(position):
 ################################################## </Position Block> ##################################################
 
 
-    
+
+################################################## <Click Block> ##################################################
+def whatClick():
+    with microf as source:
+        print('Какой клик?(Левый, Колесико, Правый)')
+        audio = r.listen(source)
+    try:
+        click = r.recognize_google(audio, language='ru-RU')
+        print(click)
+        differentClicks(click)
+    except:
+        print('Что-то пошло не так ' * 5)
+        time.sleep(1.5)
+        main()
+
+def differentClicks(click):
+    if click == 'правый':
+        pyautogui.click(button='right')
+    elif click == 'колесо':
+        pyautogui.click(button='middle')
+    elif click == 'левый':
+        pyautogui.click(button='left')
+    main()
+################################################## </Click Block> ##################################################
+
+
+
 ################################################## <Main Block> ##################################################
 def main():
     global main
@@ -55,7 +81,7 @@ def main():
             print('стоп')
             pass
         else:
-            print('Пока эта возможность в разработке или что-то неправильно сказано)))')
+            print('Пока эта возможность в разработке или что-то неправильно сказано')
     except sr.UnknownValueError:
         print('ошибка неизвестного происхождения')
         time.sleep(1.5)
