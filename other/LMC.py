@@ -60,6 +60,50 @@ def differentClicks(click):
 
 
 
+################################################## <Move Block> ##################################################
+def whereToMove():
+    with microf as source:
+        print('Направление движения?')
+        audio = r.listen(source)
+    try:
+        where = r.recognize_google(audio, language='ru-RU')
+        print(where)
+        HowFarToMove(where)
+    except:
+        print('Что-то пошло не так ' * 5)
+        time.sleep(1.5)
+        main()
+
+def HowFarToMove(where):
+    with microf as source:
+        print('Сколько пикселей?(x10)')
+        audio = r.listen(source)
+    try:
+        howFar = r.recognize_google(audio, language='ru-RU')
+        howFar = int(howFar)
+        howFar *= 10
+        print(howFar)
+        move(where, howFar)
+    except:
+        print('Что-то пошло не так ' * 5)
+        time.sleep(1.5)
+        main()
+
+def move(where, howFar):
+    [x, y] = pyautogui.position()
+    if where == 'наверх':
+        pyautogui.moveTo(x, y - howFar)
+    elif where == 'вниз':
+        pyautogui.moveTo(x, y + howFar)
+    elif where == 'налево':
+        pyautogui.moveTo(x - howFar, y)
+    elif where == 'направо':
+        pyautogui.moveTo(x + howFar, y)
+    main()
+################################################## </Move Block> ##################################################
+
+
+
 ################################################## <Main Block> ##################################################
 def main():
     global main
