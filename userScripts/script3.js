@@ -34,3 +34,28 @@ function initialize() {
     if (run) deleteAnyElement();
   }
 }
+
+
+
+function deleteAnyElement() {
+  let currentLocation = location.href;
+  let resursionChilds = function (el) {
+    for (let i = 0; i < el.childNodes.length; i++) {
+      if (el.childNodes[i].localName !== undefined) {
+        el.childNodes[i].addEventListener('contextmenu', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          el.childNodes[i].remove();
+        });
+        resursionChilds(el.childNodes[i])
+      }
+    }
+    setInterval(observer, 3000);
+  }
+  resursionChilds(location);
+
+  function observer() {
+    if (location.href !== currentLocation) resursionChilds(location);
+    currentLocation = location.href;
+  }
+}
