@@ -33,3 +33,15 @@ window.addEventListener('keypress', (e) => {
     shot();
   }
 })
+
+function rendering() {
+  if (direction === 1 || direction === 4) {
+    ctx.clearRect(x, y, 40, 40);
+  } else ctx.clearRect(x - 20, y - 20, 40, 40);
+
+  ctx.fillStyle = 'blue';
+  ctx.fillRect(x, y, 20, 20);
+
+  ctx.fillStyle = 'orange';
+  ctx.fillRect(x + 5, y + 5, 10, 10);
+}
