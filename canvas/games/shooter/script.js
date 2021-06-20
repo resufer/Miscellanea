@@ -13,3 +13,23 @@ let coordinates = {
   'point3': { x: 120, y: 120 },
   'point4': { x: 100, y: 120 }
 };
+
+window.addEventListener('keypress', (e) => {
+  let key = e.key.toLocaleLowerCase();
+
+  if (key === 'w') {
+    y -= 5;
+    direction = 1;
+  } else if (key === 's') {
+    y += 5;
+    direction = 3;
+  } else if (key === 'd') {
+    x += 5;
+    direction = 2;
+  } else if (key === 'a') {
+    x -= 5;
+    direction = 4;
+  } else if (key === ' ') {
+    shot();
+  }
+})
