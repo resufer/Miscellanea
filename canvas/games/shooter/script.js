@@ -17,18 +17,22 @@ let bodyCoordinates = [
 window.addEventListener('keypress', (e) => {
   let key = e.key.toLocaleLowerCase();
 
-  if (key === 'w') {
+  if (key === 'w' && direction !== 3) {
     y -= speed;
     direction = 1;
-  } else if (key === 's') {
+    bodyCoordinates.map(coor => coor.y -= speed)
+  } else if (key === 's' && direction !== 1) {
     y += speed;
     direction = 3;
-  } else if (key === 'd') {
+    bodyCoordinates.map(coor => coor.y += speed)
+  } else if (key === 'd' && direction !== 4) {
     x += speed;
     direction = 2;
-  } else if (key === 'a') {
+    bodyCoordinates.map(coor => coor.x += speed)
+  } else if (key === 'a' && direction !== 2) {
     x -= speed;
     direction = 4;
+    bodyCoordinates.map(coor => coor.x -= speed)
   } else if (key === ' ') {
     shot();
   }
