@@ -18,17 +18,33 @@ window.addEventListener('keypress', (e) => {
   let key = e.key.toLocaleLowerCase();
 
   if (key === 'w') {
-    y -= 5;
+    y -= speed;
     direction = 1;
+    coordinates.point1.y -= 5;
+    coordinates.point2.y -= 5;
+    coordinates.point3.y -= 5;
+    coordinates.point4.y -= 5;
   } else if (key === 's') {
-    y += 5;
+    y += speed;
     direction = 3;
+    coordinates.point1.y += 5;
+    coordinates.point2.y += 5;
+    coordinates.point3.y += 5;
+    coordinates.point4.y += 5;
   } else if (key === 'd') {
-    x += 5;
+    x += speed;
     direction = 2;
+    coordinates.point1.x += 5;
+    coordinates.point2.x += 5;
+    coordinates.point3.x += 5;
+    coordinates.point4.x += 5;
   } else if (key === 'a') {
-    x -= 5;
+    x -= speed;
     direction = 4;
+    coordinates.point1.x -= 5;
+    coordinates.point2.x -= 5;
+    coordinates.point3.x -= 5;
+    coordinates.point4.x -= 5;
   } else if (key === ' ') {
     shot();
   }
