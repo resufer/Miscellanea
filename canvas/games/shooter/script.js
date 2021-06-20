@@ -34,6 +34,7 @@ window.addEventListener('keypress', (e) => {
   }
 })
 
+setInterval(rendering, 10);
 function rendering() {
   if (direction === 1 || direction === 4) {
     ctx.clearRect(x, y, 40, 40);
@@ -41,6 +42,20 @@ function rendering() {
 
   ctx.fillStyle = 'blue';
   ctx.fillRect(x, y, 20, 20);
+
+  if (direction === 1) {
+    ctx.fillStyle = 'white';
+    ctx.fillRect(x + 5, y, 10, 5);
+  } else if (direction === 2) {
+    ctx.fillStyle = 'white';
+    ctx.fillRect(x + 15, y + 5, 5, 10);
+  } else if (direction === 3) {
+    ctx.fillStyle = 'white';
+    ctx.fillRect(x + 5, y + 15, 10, 5);
+  } else if (direction === 4) {
+    ctx.fillStyle = 'white';
+    ctx.fillRect(x, y + 5, 5, 10);
+  }
 
   ctx.fillStyle = 'orange';
   ctx.fillRect(x + 5, y + 5, 10, 10);
