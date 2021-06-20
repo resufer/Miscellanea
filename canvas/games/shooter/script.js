@@ -5,14 +5,14 @@ let canHei = document.documentElement.clientHeight;
 canvas.width = canWid;
 canvas.height = canHei;
 
-let x = y = 100, direction;
+let x = y = 100, direction, speed = 5;
 
-let coordinates = {
-  'point1': { x: 100, y: 100 },
-  'point2': { x: 120, y: 100 },
-  'point3': { x: 120, y: 120 },
-  'point4': { x: 100, y: 120 }
-};
+let bodyCoordinates = [
+  { x: 100, y: 100 },
+  { x: 120, y: 100 },
+  { x: 120, y: 120 },
+  { x: 100, y: 120 }
+];
 
 window.addEventListener('keypress', (e) => {
   let key = e.key.toLocaleLowerCase();
@@ -20,31 +20,15 @@ window.addEventListener('keypress', (e) => {
   if (key === 'w') {
     y -= speed;
     direction = 1;
-    coordinates.point1.y -= 5;
-    coordinates.point2.y -= 5;
-    coordinates.point3.y -= 5;
-    coordinates.point4.y -= 5;
   } else if (key === 's') {
     y += speed;
     direction = 3;
-    coordinates.point1.y += 5;
-    coordinates.point2.y += 5;
-    coordinates.point3.y += 5;
-    coordinates.point4.y += 5;
   } else if (key === 'd') {
     x += speed;
     direction = 2;
-    coordinates.point1.x += 5;
-    coordinates.point2.x += 5;
-    coordinates.point3.x += 5;
-    coordinates.point4.x += 5;
   } else if (key === 'a') {
     x -= speed;
     direction = 4;
-    coordinates.point1.x -= 5;
-    coordinates.point2.x -= 5;
-    coordinates.point3.x -= 5;
-    coordinates.point4.x -= 5;
   } else if (key === ' ') {
     shot();
   }
