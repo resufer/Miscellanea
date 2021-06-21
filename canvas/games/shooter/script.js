@@ -30,19 +30,19 @@ window.addEventListener('keypress', (e) => {
   if (key === 'w' && direction !== 3) {
     y -= speed;
     direction = 1;
-    bodyCoordinates.map(coor => coor.y -= speed)
+    bodyParameters.y -= speed;
   } else if (key === 's' && direction !== 1) {
     y += speed;
     direction = 3;
-    bodyCoordinates.map(coor => coor.y += speed)
+    bodyParameters.y += speed;
   } else if (key === 'd' && direction !== 4) {
     x += speed;
     direction = 2;
-    bodyCoordinates.map(coor => coor.x += speed)
+    bodyParameters.x += speed;
   } else if (key === 'a' && direction !== 2) {
     x -= speed;
     direction = 4;
-    bodyCoordinates.map(coor => coor.x -= speed)
+    bodyParameters.x -= speed;
   } else if (key === ' ') {
     shot();
   }
