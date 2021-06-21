@@ -138,3 +138,12 @@ function problems() {
   }, 50);
 }
 problems(); setInterval(problems, 2000)
+
+
+function checkCollision(problemCoordinates) {
+  if (problemCoordinates[0].x <= bulletCoordinates[0].x * 2 - bulletCoordinates[1].x &&
+    problemCoordinates[0].y <= bulletCoordinates[0].y * 2 - bulletCoordinates[1].y &&
+    problemCoordinates[1].x <= bulletCoordinates[1].x && problemCoordinates[1].y <= bulletCoordinates[1].y) {
+    return true
+  }
+}
