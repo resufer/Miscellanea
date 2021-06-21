@@ -14,12 +14,15 @@ let bodyCoordinates = [
   { x: 100, y: 120 }
 ];
 
-let bulletCoordinates = [ //ctx.fillRect(x + 5, y + 5, 10, 10);
-  { x: 105, y: 105 },
-  { x: 115, y: 105 },
-  { x: 115, y: 115 },
-  { x: 105, y: 115 }
-];
+let bulletCoordinates = getBulletCoordinates();
+function getBulletCoordinates() {
+  return [
+    { x: bodyCoordinates[0].x + 5, y: bodyCoordinates[0].y + 5 },
+    { x: bodyCoordinates[1].x + 15, y: bodyCoordinates[1].y + 5 },
+    { x: bodyCoordinates[2].x + 15, y: bodyCoordinates[2].y + 15 },
+    { x: bodyCoordinates[3].x + 5, y: bodyCoordinates[3].y + 15 }
+  ]
+}
 
 window.addEventListener('keypress', (e) => {
   let key = e.key.toLocaleLowerCase();
