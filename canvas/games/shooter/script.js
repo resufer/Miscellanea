@@ -7,21 +7,21 @@ canvas.height = canHei;
 
 let x = y = 100, direction, speed = 5;
 
-let bodyCoordinates = [
-  { x: 100, y: 100 },
-  { x: 120, y: 100 },
-  { x: 120, y: 120 },
-  { x: 100, y: 120 }
-];
+let bodyParameters = {
+  x: 100,
+  y: 100,
+  width: 20,
+  height: 20
+}
 
-let bulletCoordinates = getBulletCoordinates();
-function getBulletCoordinates() {
-  return [
-    { x: bodyCoordinates[0].x + 5, y: bodyCoordinates[0].y + 5 },
-    { x: bodyCoordinates[1].x + 15, y: bodyCoordinates[1].y + 5 },
-    { x: bodyCoordinates[2].x + 15, y: bodyCoordinates[2].y + 15 },
-    { x: bodyCoordinates[3].x + 5, y: bodyCoordinates[3].y + 15 }
-  ]
+let bulletParameters;
+function getBulletParameters() {
+  return {
+    x: bodyParameters.x + 5,
+    y: bodyParameters.y + 5,
+    width: 10,
+    height: 10
+  }
 }
 
 window.addEventListener('keypress', (e) => {
