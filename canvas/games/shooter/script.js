@@ -109,3 +109,32 @@ function shot() {
     ctx.clearRect(bulletX, bulletY, 10, 10);
   }, 1200);
 }
+
+
+function problems() {
+  let problemX = canWid;
+  let problemY = 200;
+  let problemWid = 50;
+  let problemHei = 250;
+
+  let problemCoordinates = [
+    { x: problemX, y: problemY },
+    { x: problemX + problemWid, y: problemY },
+    { x: problemX + problemWid, y: problemY + problemHei },
+    { x: problemX, y: problemY + problemHei }
+  ];
+
+  let problemsInterval = setInterval(() => {
+    problemX -= 5;
+    ctx.clearRect(problemX + 10, problemY, problemWid, problemHei);
+    ctx.fillRect(problemX, problemY, problemWid, problemHei);
+    problemCoordinates.map(coor => coor.x -= 5);
+    checkCollision(problemCoordinates)
+
+    if (problemX + problemWid <= 0 || checkCollision(problemCoordinates)) {
+      clearInterval(problemsInterval);
+      ctx.clearRect(problemX, problemY, problemWid, problemHei);
+    }
+  }, 50);
+}
+problems(); setInterval(problems, 2000)
