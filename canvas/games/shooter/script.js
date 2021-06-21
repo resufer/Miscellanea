@@ -14,6 +14,13 @@ let bodyCoordinates = [
   { x: 100, y: 120 }
 ];
 
+let bulletCoordinates = [ //ctx.fillRect(x + 5, y + 5, 10, 10);
+  { x: 105, y: 105 },
+  { x: 115, y: 105 },
+  { x: 115, y: 115 },
+  { x: 105, y: 115 }
+];
+
 window.addEventListener('keypress', (e) => {
   let key = e.key.toLocaleLowerCase();
 
