@@ -75,49 +75,21 @@ function rendering() {
   ctx.fillRect(x + 5, y + 5, 10, 10);
 }
 
-
 function shot() {
-  let intervalShot;
-  let bulletY = y + 5;
-  let bulletX = x + 5;
-  if (direction === 1) {    
-    intervalShot = setInterval(() => {      
-      ctx.fillStyle = 'orange';
-      bulletY -= speed;
-      bulletCoordinates.map(coor => coor.y -= speed);
-      ctx.clearRect(bulletX, bulletY + speed, 10, 10);
-      ctx.fillRect(bulletX, bulletY, 10, 10);
-    }, 15);
-  } else if (direction === 2) {
-    intervalShot = setInterval(() => {
-      ctx.fillStyle = 'orange';
-      bulletX += speed;
-      bulletCoordinates.map(coor => coor.x += speed);
-      ctx.clearRect(bulletX - speed, bulletY, 10, 10);
-      ctx.fillRect(bulletX, bulletY, 10, 10);
-    }, 15);
-  } else if (direction === 3) {
-    intervalShot = setInterval(() => {
-      ctx.fillStyle = 'orange';
-      bulletY += speed;
-      bulletCoordinates.map(coor => coor.y += speed);
-      ctx.clearRect(bulletX, bulletY - speed, 10, 10);
-      ctx.fillRect(bulletX, bulletY, 10, 10);
-    }, 15);
-  } else if (direction === 4) {
-    intervalShot = setInterval(() => {
-      ctx.fillStyle = 'orange';
-      bulletX -= speed;
-      bulletCoordinates.map(coor => coor.x -= speed);
-      ctx.clearRect(bulletX + speed, bulletY, 10, 10);
-      ctx.fillRect(bulletX, bulletY, 10, 10);
-    }, 15);
-  }
-  setTimeout(() => {
-    clearInterval(intervalShot);
-    bulletCoordinates = getBulletCoordinates();
-    ctx.clearRect(bulletX, bulletY, 10, 10);
-  }, 1200);
+  let directionShot = direction;
+  bulletParameters = getBulletParameters();
+  ctx.fillStyle = 'orange';
+    if (directionShot === 1) {
+      bulletParameters.y -= speed;
+    } else if (directionShot === 2) {
+      bulletParameters.x += speed;
+    } else if (directionShot === 3) {
+      bulletParameters.y += speed;
+    } else if (directionShot === 4) {
+      bulletParameters.x -= speed;
+    }
+    
+  ctx.fillRect(bulletParameters.x, bulletParameters.y, bulletParameters.width, bulletParameters.height);
 }
 
 
