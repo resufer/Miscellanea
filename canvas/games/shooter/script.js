@@ -94,32 +94,30 @@ function shot() {
 
 
 function problems() {
-  let problemX = canWid;
-  let problemY = 200;
-  let problemWid = 50;
-  let problemHei = 250;
+  let randomProblemDirection = Math.floor(Math.random() * 5);
+  let x, y;
+  if (randomProblemDirection === 1) {
+    x = 0;
+    y = Math.floor(Math.random() * 500);
+  } else if (randomProblemDirection === 2) {
+    x = Math.floor(Math.random() * 800);
+    y = 0;
+  } else if (randomProblemDirection === 3) {
+    x = canWid;
+    y = Math.floor(Math.random() * 500);
+  } else if (randomProblemDirection === 4) {
+    x = Math.floor(Math.random() * 800);
+    y = canHei;
+  }
+  let width = Math.floor(Math.random() * 300 + 20);
+  let height = Math.floor(Math.random() * 300 + 20);
 
-  let problemCoordinates = [
-    { x: problemX, y: problemY },
-    { x: problemX + problemWid, y: problemY },
-    { x: problemX + problemWid, y: problemY + problemHei },
-    { x: problemX, y: problemY + problemHei }
-  ];
+  let problemParameters = {
+    x, y, width, height
+  };
 
-  let problemsInterval = setInterval(() => {
-    problemX -= 5;
-    ctx.clearRect(problemX + 10, problemY, problemWid, problemHei);
-    ctx.fillRect(problemX, problemY, problemWid, problemHei);
-    problemCoordinates.map(coor => coor.x -= 5);
-    checkCollision(problemCoordinates)
-
-    if (problemX + problemWid <= 0 || checkCollision(problemCoordinates)) {
-      clearInterval(problemsInterval);
-      ctx.clearRect(problemX, problemY, problemWid, problemHei);
-    }
-  }, 50);
+  return problemParameters;
 }
-problems(); setInterval(problems, 2000)
 
 
 function checkCollision(problemCoordinates) {
