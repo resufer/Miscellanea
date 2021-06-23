@@ -119,6 +119,28 @@ function problems() {
   return problemParameters;
 }
 
+function createProblem() {
+  let problemParameters = problems();
+
+  ctx.clearRect(problemParameters.x, problemParameters.y, problemParameters.width, problemParameters.height);
+  if (randomProblemDirection === 1) {
+    problemParameters.x += 1;
+  } else if (randomProblemDirection === 2) {
+    problemParameters.y += 1;
+  } else if (randomProblemDirection === 3) {
+    problemParameters.x -= 1;
+  } else if (randomProblemDirection === 4) {
+    problemParameters.y -= 1;
+  }
+  ctx.fillRect(problemParameters.x, problemParameters.y, problemParameters.width, problemParameters.height);
+  checkCollision(problemParameters);
+
+  if (problemParameters.x + problemParameters.width <= 0 || checkCollision(problemParameters)) {
+    clearInterval(problemsInterval);
+    ctx.clearRect(problemParameters.x, problemParameters.y, problemParameters.width + 10, problemParameters.height);
+  }
+}
+
 
 function checkCollision(problemCoordinates) {
   if (problemCoordinates[0].x <= bulletCoordinates[0].x * 2 - bulletCoordinates[1].x &&
