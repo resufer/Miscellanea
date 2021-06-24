@@ -44,31 +44,30 @@ window.addEventListener('keypress', (e) => {
   }
 })
 
-setInterval(rendering, 10);
 function rendering() {
   if (direction === 1 || direction === 4) {
-    ctx.clearRect(x, y, 40, 40);
-  } else ctx.clearRect(x - 20, y - 20, 40, 40);
+    ctx.clearRect(bodyParameters.x, bodyParameters.y, 40, 40);
+  } else ctx.clearRect(bodyParameters.x - 20, bodyParameters.y - 20, 40, 40);
 
   ctx.fillStyle = 'blue';
-  ctx.fillRect(x, y, 20, 20);
+  ctx.fillRect(bodyParameters.x, bodyParameters.y, 20, 20);
 
   if (direction === 1) {
     ctx.fillStyle = 'white';
-    ctx.fillRect(x + 5, y, 10, 5);
+    ctx.fillRect(bodyParameters.x + 5, bodyParameters.y, 10, 5);
   } else if (direction === 2) {
     ctx.fillStyle = 'white';
-    ctx.fillRect(x + 15, y + 5, 5, 10);
+    ctx.fillRect(bodyParameters.x + 15, bodyParameters.y + 5, 5, 10);
   } else if (direction === 3) {
     ctx.fillStyle = 'white';
-    ctx.fillRect(x + 5, y + 15, 10, 5);
+    ctx.fillRect(bodyParameters.x + 5, bodyParameters.y + 15, 10, 5);
   } else if (direction === 4) {
     ctx.fillStyle = 'white';
-    ctx.fillRect(x, y + 5, 5, 10);
+    ctx.fillRect(bodyParameters.x, bodyParameters.y + 5, 5, 10);
   }
 
   ctx.fillStyle = 'orange';
-  ctx.fillRect(x + 5, y + 5, 10, 10);
+  ctx.fillRect(bodyParameters.x + 5, bodyParameters.y + 5, 10, 10);
 }
 
 function shot() {
