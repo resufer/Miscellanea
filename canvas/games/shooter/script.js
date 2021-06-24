@@ -5,7 +5,7 @@ let canHei = document.documentElement.clientHeight;
 canvas.width = canWid;
 canvas.height = canHei;
 
-let x = y = 100, direction, speed = 5;
+let direction, speed = 5;
 
 let bodyParameters = {
   x: 100,
@@ -28,19 +28,15 @@ window.addEventListener('keypress', (e) => {
   let key = e.key.toLocaleLowerCase();
 
   if (key === 'w' && direction !== 3) {
-    y -= speed;
     direction = 1;
     bodyParameters.y -= speed;
   } else if (key === 's' && direction !== 1) {
-    y += speed;
     direction = 3;
     bodyParameters.y += speed;
   } else if (key === 'd' && direction !== 4) {
-    x += speed;
     direction = 2;
     bodyParameters.x += speed;
   } else if (key === 'a' && direction !== 2) {
-    x -= speed;
     direction = 4;
     bodyParameters.x -= speed;
   } else if (key === ' ') {
