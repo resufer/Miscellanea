@@ -142,10 +142,21 @@ function createProblem() {
 }
 
 
-function checkCollision(problemCoordinates) {
-  if (problemCoordinates[0].x <= bulletCoordinates[0].x * 2 - bulletCoordinates[1].x &&
-    problemCoordinates[0].y <= bulletCoordinates[0].y * 2 - bulletCoordinates[1].y &&
-    problemCoordinates[1].x <= bulletCoordinates[1].x && problemCoordinates[1].y <= bulletCoordinates[1].y) {
-    return true
+function checkCollision(problemParameters) {
+  try {
+    if (
+      (bulletParameters.x + bulletParameters.width >= problemParameters.x + 2)
+      &&
+      (bulletParameters.x + 2 <= problemParameters.x + problemParameters.width)
+      &&
+      (bulletParameters.y + bulletParameters.height >= problemParameters.y + 2)
+      &&
+      (bulletParameters.y + 2 <= problemParameters.y + problemParameters.height)
+    ) {
+      return true
+    } else return false
+  }
+  catch {
+    return false
   }
 }
