@@ -155,3 +155,10 @@ function checkCollision(problemParameters) {
     return false
   }
 }
+
+setInterval(() => {
+  ctx.clearRect(0, 0, canWid, canHei);
+  rendering();
+  shot();
+  createProblem();
+}, 1);
